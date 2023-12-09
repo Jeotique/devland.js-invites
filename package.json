@@ -1,6 +1,6 @@
 {
   "name": "devland.js-invites",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "Easy invite logger system with devland.js",
   "main": "index.js",
   "types": "./types/index.d.ts",
