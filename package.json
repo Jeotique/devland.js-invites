@@ -22,7 +22,7 @@
   "author": "Jeotique",
   "license": "Apache 2.0",
   "dependencies": {
-    "devland.js": "^1.4.1"
+    "devland.js": "^1.4.3"
   },
   "homepage": "https://github.com/Jeotique/devland.js-invites#readme"
 }
