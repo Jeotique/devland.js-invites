@@ -1,7 +1,7 @@
 import {Client, Store, Invite, Member} from "devland.js";
 import {EventEmitter} from "events";
 
-declare module '@devland.js/invites' {
+declare module 'devland.js-invites' {
     type global_vanity = {
         code: string,
         uses: number,

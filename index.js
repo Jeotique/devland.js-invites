@@ -1,5 +1,5 @@
-import {Client, Store} from "devland.js";
-import {EventEmitter} from "events";
+const {Client, Store} = require("devland.js");
+const {EventEmitter} = require("events");
 
 module.exports = class InviteLogger extends EventEmitter {
     /**
@@ -16,7 +16,7 @@ module.exports = class InviteLogger extends EventEmitter {
         this.client.on('ready', () => {
             if(this.client.options.guildsLifeTime > 0) {
                 this.client.guilds.forEach(guild => {
-                    guild.fetchInvite().then(invites => {
+                    guild.fetchInvites().then(invites => {
                         invites.forEach(invite => {
                             let _a = this.cache.invites[guild.id] ? this.cache.invites[guild.id] : new Store()
                             _a.set(invite.code, invite.uses)
@@ -34,7 +34,7 @@ module.exports = class InviteLogger extends EventEmitter {
             } else {
                 this.client.fetchGuilds().then(guilds => {
                     guilds.forEach(guild => {
-                        guild.fetchInvite().then(invites => {
+                        guild.fetchInvites().then(invites => {
                             invites.forEach(invite => {
                                 let _a = this.cache.invites[guild.id] ? this.cache.invites[guild.id] : new Store()
                                 _a.set(invite.code, invite.uses)
@@ -53,7 +53,7 @@ module.exports = class InviteLogger extends EventEmitter {
             }
         })
         this.client.on('guildAdded', guild => {
-            guild.fetchInvite().then(invites => {
+            guild.fetchInvites().then(invites => {
                 invites.forEach(invite => {
                     let _a = this.cache.invites[guild.id] ? this.cache.invites[guild.id] : new Store()
                     _a.set(invite.code, invite.uses)
@@ -89,7 +89,7 @@ module.exports = class InviteLogger extends EventEmitter {
         this.client.on('memberJoin', async(member) => {
             const {guild} = member
             if(!guild) return;
-            let currentInvites = await guild.fetchInvite().catch(()=>{})
+            let currentInvites = await guild.fetchInvites().catch(()=>{})
             if(!currentInvites) {
                 return this.emit('unknowInvite', member)
             }

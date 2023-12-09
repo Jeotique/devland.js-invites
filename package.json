@@ -1,9 +1,8 @@
 {
   "name": "devland.js-invites",
-  "version": "1.0.0",
+  "version": "1.0.2",
   "description": "Easy invite logger system with devland.js",
   "main": "index.js",
-  "type": "module",
   "types": "./types/index.d.ts",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
