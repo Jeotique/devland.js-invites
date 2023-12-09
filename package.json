@@ -1,0 +1,29 @@
+{
+  "name": "@devland.js/invites",
+  "version": "1.0.0",
+  "description": "Easy invite logger system with devland.js",
+  "main": "index.js",
+  "type": "module",
+  "types": "./types/index.d.ts",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "devland",
+    "devland.js",
+    "mxtorie"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Jeotique/devland.js-invites.git"
+  },
+  "bugs": {
+    "url": "https://github.com/Jeotique/devland.js-invites/issues"
+  },
+  "author": "Jeotique",
+  "license": "Apache 2.0",
+  "dependencies": {
+    "devland.js": "^1.4.1"
+  },
+  "homepage": "https://github.com/Jeotique/devland.js-invites#readme"
+}
