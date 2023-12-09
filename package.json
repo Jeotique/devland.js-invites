@@ -1,5 +1,5 @@
 {
-  "name": "@devland.js/invites",
+  "name": "devland.js-invites",
   "version": "1.0.0",
   "description": "Easy invite logger system with devland.js",
   "main": "index.js",

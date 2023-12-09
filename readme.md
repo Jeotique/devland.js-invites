@@ -1,12 +1,12 @@
-# @devland.js/invites
+# devland.js-invites
 ## How to use ?
 `npm install devland.js@latest`\
-`npm install @devland.js/invites`
+`npm install devland.js-invites@latest`
 
 ### Setup : 
 ````js
 const {Client} = require('devland.js')
-const InviteLogger = require('@devland.js/invites')
+const InviteLogger = require('devland.js-invites')
 
 const client = new Client({
     intents: ["GUILDS", "GUILDS_MEMBERS", "GUILD_INVITES"],
